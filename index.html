@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slender: Лісова Пам'ять</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="hud">
+        <div class="stat">
+          <span class="label">Сторінки</span>
+          <strong id="page-count">0 / 5</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Батарея</span>
+          <strong id="battery-level">100%</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Розум</span>
+          <strong id="sanity-level">100%</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Мета</span>
+          <strong id="objective-text">Збери сторінки</strong>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <h3>Інвентар</h3>
+        <div class="inventory" id="inventory"></div>
+        <h3>Щоденник</h3>
+        <ol id="log"></ol>
+      </aside>
+
+      <canvas id="gameCanvas" width="1280" height="760"></canvas>
+
+      <div id="start-screen" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">Квест / Horror</p>
+          <h1>Slender: Лісова Пам'ять</h1>
+          <p class="story">
+            Вночі в лісі зникли троє дітей. У вашій кімнаті залишився зошит сестри.
+            У ньому було написано: «Покинь ліс, поки він не навчив його говорити.»
+            Тепер ви стоїте на околиці лісу з фонариком і п’ятьма сторінками спогадів.
+          </p>
+          <ul>
+            <li>Зберіть 5 сторінок</li>
+            <li>Уникайте Slender Man</li>
+            <li>Підзарядьте фонарик біля багаття</li>
+            <li>Вийдіть через браму</li>
+          </ul>
+          <button id="start-btn">Почати гру</button>
+        </div>
+      </div>
+
+      <div id="end-screen" class="overlay hidden">
+        <div class="panel small">
+          <p class="eyebrow" id="result-tag">Результат</p>
+          <h2 id="result-title">Гра завершена</h2>
+          <p id="result-message"></p>
+          <button id="restart-btn">Грати ще</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
